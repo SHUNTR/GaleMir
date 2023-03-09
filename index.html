@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="assets/css/main.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="icon" href="assets/images/icons/logo__icon.svg" type="image/svg">
+   <link rel="stylesheet" href="assets/fonts/fonts.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+   <script type="text/javascript" src="assets/libs/jquery.lazy-master/jquery.lazy.min.js"></script>
+   <script src="https://kit.fontawesome.com/cb18628afa.js" crossorigin="anonymous"></script>
+   <title>Галемир - Главная страница</title></head>
+<body>
+    <header class="main-header">
+            <a class="main-header__item main-header__logo-wrapper" href="index.html">
+                    <img src="assets/images/icons/logo__icon.svg" alt="" class="main-header__logo icon">
+                    <img src="assets/images/icons/logo.svg" alt="" class="main-header__logo">
+            </a>
+            <div class="main-header__item">
+                <div class="main-header__seacrh-wrapper seacrh-wrapper">
+                    <input class="seacrh-wrapper__search-input" type="text" placeholder="Поиск по сайту | Введите слово и нажмите Enter ↵">
+                    <button class="search-wrapper__btn" type="button" onclick="CloseSearchPanel()">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="main-header__btns-wrapper">
+                    <button class="main-header__btn" type="button" onclick="ChangeAsideMenu()">
+                        <i class="fa-solid fa-grip-lines"></i>
+                    </button>
+                    <button class="main-header__btn" type="button" onclick="EnableFullScreen()">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                    <button class="main-header__btn main-header__btn_glowing" type="button" onclick="ShowSearchPanel()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div class="main-header__user-wrapper user-wrapper">
+                    <button class="main-header__btn popup-opener" type="button" onclick="ShowUserMenu()">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="user-wrapper__menu popup-wrapper">
+                        <ul class="user-wrapper__list">
+                            <li class="user-wrapper__item">
+                                <button class="user-wrapper__btn">
+                                       <span class="user-wrapper__icon">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        </span>
+                                        <span class="user-wrapper__text">
+                                        Вход
+                                        </span>
+                                </button>
+                            </li>
+                            <li class="user-wrapper__item">
+                                <button class="user-wrapper__btn">
+                                    <span class="user-wrapper__icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </span>
+                                    <span class="user-wrapper__text">
+                                        Регистрация
+                                    </span>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <aside class="main-aside">
+        <ul class="main-aside__menu site-menu"> 
+            <li class="site-menu__item">
+                <h1 class="site-menu__title">
+                    Музей
+                </h1>
+                <ul class="site-menu__list">
+                    <li class="site-menu__list-item active">
+                        <button class="site-menu__btn" type="button" onclick="NavMenuChanger(event)">
+                            <span class="site-menu__icon">
+                                <i class="fas fa-university"></i>
+                            </span>
+                            <span class="site-menu__text">
+                                Картины
+                            </span>
+                           <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="site-menu__sublist sublist">
+                            <li class="sublist__item">
+                                <a href="" class="sublist__link">
+                                     Картинная галерея
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="museum.html" class="sublist__link">
+                                Музеи Мира
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="site-menu__list">
+                    <li class="site-menu__list-item">
+                        <button class="site-menu__btn" type="button" onclick="NavMenuChanger(event)">
+                            <span class="site-menu__icon">
+                                <i class="fas fa-book"></i>
+                            </span>
+                            <span class="site-menu__text">
+                                Чтение
+                            </span>
+                           <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="site-menu__sublist sublist">
+                            <li class="sublist__item">
+                                <a href="authors.html" class="sublist__link">
+                                     Русские Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Иностранные Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="museum.html" class="sublist__link">
+                                Музеи Мира
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="site-menu__item">
+                <h1 class="site-menu__title">
+                    Артклуб
+                </h1>
+                <ul class="site-menu__list">
+                    <li class="site-menu__list-item">
+                        <button class="site-menu__btn" type="button" onclick="NavMenuChanger(event)">
+                            <span class="site-menu__icon">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            <span class="site-menu__text">
+                                Экспозиция
+                            </span>
+                           <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="site-menu__sublist sublist">
+                            <li class="sublist__item">
+                                <a href="artclub.html" class="sublist__link">
+                                     Живопись
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Графика
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Цифровое исскуство
+                                </a>
+                            </li>
+                            <li class="sublist__item">
+                                <a href="" class="sublist__link">
+                                     Хендмейд
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Абстракция
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Иконы
+                                </a>
+                            </li>
+                            <li class="sublist__item">
+                                <a href="" class="sublist__link">
+                                     Фотография
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Скульптура
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Детсткие рисунки
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="site-menu__list">
+                    <li class="site-menu__list-item">
+                        <button class="site-menu__btn" type="button" onclick="NavMenuChanger(event)">
+                            <span class="site-menu__icon">
+                                <i class="fas fa-users"></i>
+                            </span>
+                            <span class="site-menu__text">
+                                Сообщество
+                            </span>
+                           <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="site-menu__sublist sublist">
+                            <li class="sublist__item">
+                                <a href="" class="sublist__link">
+                                     Русские Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Иностранные Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="museum.html" class="sublist__link">
+                                Музеи Мира
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            
+           
+        </ul>
+    </aside>    <main class="main-container">
+        <section class="start">
+            <div class="start__img-container">
+                 <img src="assets/images/bg.webp" alt="" class=" start__img">
+            </div>
+           
+            <h1 class="start__title">
+                Картины и художники
+            </h1>
+            <div class="start__links links">
+                <a href="" class="start__link links__link">
+                    <h3 class="links__title">
+                        Известные художники:
+                    </h3>
+                    <span class="links__text">
+                        Артклуб
+                        <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                </a>
+                <a href="" class="start__link links__link">
+                    <h3 class="links__title">
+                        Наши современники:
+                    </h3>
+                    <span class="links__text ">
+                        Картинная галерея
+                        <i class="fa-solid fa-angle-right"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+        <section class="main-panels">
+            <hgroup class="main-panels__titles">
+                <h1 class="main-panels__title">
+                    Гигантский музей онлайн — ГалеМир
+                </h1>
+                <p class="main-panels__subtitle">
+                    Картины великих художников, живопись старых мастеров из лучших музеев мира. Лучше один раз увидеть!
+                </p>
+            </hgroup>
+            <div class="main-panels__body panels">
+                <a href="" class="panels__panel" id="afisha">
+                    <img src="assets/images/afisha.webp" alt="" class=" panels__img">
+                </a>
+                <a href="" class="panels__panel" id="museum__stats">
+                   <p class="panels__text">
+                        Картин в музее:
+                        <span class="panels__count">
+                            173 600
+                        </span>
+                   </p>
+                </a>
+                <div class="panels__panel" id="panel__menu">
+                    <ul class="panels__list">
+                        <li class="panels__item">
+                            <a href="ar" class="panels__link">
+                                <span class="panels__icon">
+                                    <i class="fa-solid fa-landmark"></i>
+                                </span>
+                                <span class="panels__name">
+                                         Коллекции музеев
+                                </span>
+                           
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <span class="panels__icon">
+                                    <i class="fa-solid fa-landmark"></i>
+                                </span>
+                                <span class="panels__name">
+                                   Русские художники    
+                                </span>
+                               
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <span class="panels__icon">
+                                    <i class="fa-solid fa-calendar-days"></i>
+                                </span>
+                                <span class="panels__name">
+                                    Афиша выставок 
+                                </span>
+                               
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <span class="panels__icon">
+                                    <i class="fa-solid fa-newspaper"></i>
+                                </span>
+                                <span class="panels__name">
+                                    Новости культуры 
+                                </span>
+                                
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <span class="panels__icon">
+                                    <i class="fa-solid fa-filter"></i>
+                                </span>
+                                <span class="panels__name">
+                                    Энциклопедия
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="panels__panel" id="authors">
+                    <ul class="panels__list">
+                        <li class="panels__item">
+                            <a href="art.html" class="panels__link">
+                                <img src="assets/images/authors/djoko.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                         452 <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Леонардо Да Винчи
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/danae.jpg" alt="" class=" panels__img">
+                            <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Рембрандт
+                                    </span>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/gogh.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Ван Гог
+                                    </span>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/rafa.jpg" alt="" class=" panels__img">
+                            <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                    452  <i class="fa-regular fa-image"></i>
+                                  </span>
+                                  <span class="panels__author-name">
+                                      Рафаэль
+                                  </span> 
+                              </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/ttn.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Тициан
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/mike.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                        452<i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Микеланджело
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/carava.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                       452 <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Караваджо
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/boti.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Боттичелли
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/bosx.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Босх
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/vela.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Веласкес
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/rubens.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                       452 <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Рубенс
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/klimt.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                       452 <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Климт
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/verm.jpg" alt="" class=" panels__img"> 
+                                    <div class="panels__author-info">
+                                        <span class="panels__author-count">
+                                             452   <i class="fa-regular fa-image"></i>
+                                        </span>
+                                        <span class="panels__author-name">
+                                            Вермеер
+                                        </span>
+                                    </div>
+                            </a>
+                       
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/aiva.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                         452   <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Айвазовский
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/authors/shish.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      318  <i class="fa-regular fa-image"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Шишкин
+                                    </span> 
+                                </div>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="" class="panels__panel" id="fra">
+                    <img src="assets/images/fra.jpg" alt="" class=" panels__img">
+                    <span class="panels__update panels__update_red">
+                        Обновление
+                    </span>
+                </a>
+                <a href="" class="panels__panel" id="artclub">
+                    <img src="assets/images/artclub918_720.jpg" alt="" class=" panels__img">
+                </a>
+                <a href="" class="panels__panel" id="tiepolo">
+                    <img src="assets/images/tiepolo.jpg" alt="" class=" panels__img">
+                    <span class="panels__update panels__update_yellow">
+                        Обновление
+                    </span>
+                </a>
+                <a href="" class="panels__panel" id="museummoney">
+                    <img src="assets/images/mm2.jpg" alt="" class=" panels__img">
+                </a>
+                <a href="" class="panels__panel" id="puzzles">
+                    <img src="assets/images/puzzles-front.jpg" alt="" class=" panels__img">
+                </a>
+                <a href="" class="panels__panel" id="gogh">
+                    <img src="assets/images/1989.jpg" alt="" class=" panels__img">
+                    <span class="panels__post-title">
+                        Скрытый автопортрет Ван Гога обнаружен за более ранней картиной
+                    </span>
+                </a>
+                <a href="" class="panels__panel" id="popular">
+                    <img src="assets/images/145236206.jpg" alt="" class=" panels__img">
+                    <div class="panels__author-info">
+                        <span class="panels__picture-name">
+                            Питер Пауль Рубенс – Мерзнущая Венера
+                        </span>
+                    </div>
+                </a>
+                <a href="" class="panels__panel" id="daypicture">
+                    <img src="assets/images/posmotret-v-glaza-proxozhemu.jpg" alt="" class=" panels__img">
+                    <div class="panels__author-info">
+                        <span class="panels__picture-name">
+                            Александр - Посмотреть в глаза прохожему
+                        </span>
+                    </div>
+                </a>
+                <a href="" class="panels__panel" id="catalog">
+                    <img src="assets/images/user_pictures/pervye.jpg" alt="" class=" panels__img">
+                </a>
+                <div class="panels__panel" id="user_pictures">
+                    <ul class="panels__list">
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/krylco.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                         452 <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        iri321
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/moroznoe-utro.jpg" alt="" class=" panels__img">
+                            <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        differ
+                                    </span>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/nerexta-zimoj_1.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        an1975
+                                    </span>
+                            </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/piony_7.jpg" alt="" class=" panels__img">
+                            <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                    452  <i class="fa-solid fa-star"></i>
+                                  </span>
+                                  <span class="panels__author-name">
+                                      docasta57
+                                  </span> 
+                              </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/predzime_2.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        vonopag
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/nu-gde-zhe-dedushka-moroz.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                        452<i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                       lilel
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/zasnezhennyj-les.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                       452 <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        alexandr1999
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/wednesday.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        askme
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/variant-2.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        iris333
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/predzime_2.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      452  <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                      avm20123
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/predzime_2.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                       452 <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        byzofff
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/po-nebesam.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                       452 <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        sizovo
+                                    </span> 
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/v-sadu.jpg" alt="" class=" panels__img"> 
+                                    <div class="panels__author-info">
+                                        <span class="panels__author-count">
+                                             452   <i class="fa-solid fa-star"></i>
+                                        </span>
+                                        <span class="panels__author-name">
+                                            axart
+                                        </span>
+                                    </div>
+                            </a>
+                       
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/v-sadu.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                         452   <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        vakal
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="panels__item">
+                            <a href="" class="panels__link">
+                                <img src="assets/images/user_pictures/moroznoe-utro.jpg" alt="" class=" panels__img">
+                                <div class="panels__author-info">
+                                    <span class="panels__author-count">
+                                      318  <i class="fa-solid fa-star"></i>
+                                    </span>
+                                    <span class="panels__author-name">
+                                        Shiska
+                                    </span> 
+                                </div>
+                             </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="blog">
+            <div class="blog__body">
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                        Виртуальный музей живописи.
+                        Картины известных художников
+                    </h3>
+                    <p class="blog__paragraph">
+                        Все наши впечатления, фантазии, увиденные архитектурные ландшафты, предметы, пейзажи удивительным образом находят свое отображение в творческих работах великих мастеров и знаменитых художников. Можно сказать, что любая галерея картин насыщает зрителя таинственным колоритом высокого искусства и неповторимыми оттенками внутреннего мира их создателя.</p>
+                    <img src="assets/images/blog/ht-07.jpg" alt="" class=" blog__img">
+                </div>
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                        Остановить прекрасное мгновенье
+                    </h3>
+                    <p class="blog__paragraph">
+                        Уже не одну сотню лет это делается при помощи живописи – одного из важнейших видов изобразительного искусства. Ничто, кроме живописи, не способно с необычайной глубиной и техническим совершенством отразить богатую цветом, объёмом и материальной уникальностью окружающую человека действительность. Воспроизвести подсвеченный солнечным лучом воздух в утренней прохладе соснового леса. Или показать сверкающую всеми цветами радуги каплю росы на травинке.
+                    </p>
+                    <p class="blog__paragraph">
+                        Глубина окружающего человека пространства, удивительные особенности простых предметов проявляются в художественном творении благодаря использованию средств и приемов, присущих только живописи. Через рисунок, цвет и светотень, выразительные мазки, грамотные композиционные и фактурные решения изображение обычных вещей приобретают художественную ценность. Это и дым мчащегося паровоза, и степная пыль, поднятая табуном лошадей. Зритель может ощутить себя и в космическом корабле, и на палубе старинного парусника. Мастерски выписанные жанровые сюжеты помогут ему ощутить кисейную нежность наряда аристократки и грубую фактуру рубища нищего.
+                    </p>
+                    <img src="assets/images/blog/177849x.jpg" alt="" class=" blog__img">
+                </div>
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                        Зеркало человечества
+                    </h3>
+                    <p class="blog__paragraph">
+                        Человечество помнит себя во многом благодаря живописи. Это были сначала примитивные изображения животных, сцен охоты на них. Затем появился человеческий образ. Складывается подобие композиции. Красками служили кусочки охры и угля. Рабовладельческий период развития общества обогатил живопись её связью с архитектурой, новыми техническими средствами. Нередким было примитивное изображение человека, развёрнутые повествовательные сюжеты. Появились пейзажи, изображения предметов быта, домашних животных и птиц. Такая древняя живопись имела декоративный характер, у неё были контурные линии и цветовые пятна.
+                    </p>
+                    <img src="assets/images/blog/5429x.jpg" alt="" class=" blog__img">
+                </div>
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                       Разная живопись
+                    </h3>
+                    <p class="blog__paragraph">
+                        Живопись – удивительное по своему разнообразию явление. В нём традиционно выделяется станковая, монументальная и декоративная живопись, а также оформление театральных декораций и миниатюрная.
+                    </p>
+                    <p class="blog__paragraph">
+                        Наиболее распространенной является станковая живопись. Она выполняется на мольберте, который является станком для художника. Обычно материальной основой картины является холст, натянутый на подрамник. Применяется также дерево, картон и бумага. Картина показывает современную действительность, исторические события, сюжеты, задуманные живописцем. Для станковой живописи нет ограничений в изобразительных возможностях. Здесь богатый цвет позволяет глубоко и точно отобразить уникальность действительности.
+                    </p>
+                    <p class="blog__paragraph">
+                        Особым, идеологически нагруженным вариантом является монументальная живопись. Она представляет собой масштабные живописные произведения, которые создаются для украшений объектов архитектуры. В ней должны отражаться заметные процессы и события, которые повлияли на общественный прогресс. Такая живопись, в силу её масштабности, предполагает особые подходы и значительные средства.
+                    </p>
+                    <p class="blog__paragraph">
+                        При помощи декоративной живописи украшаются интерьеры помещений. Она может выступать в виде насыщенных красками панно, дающими иллюзию визуального изменения объёма помещений в нужную сторону. Декоративная живопись органически объединяет интерьер и украшает предметы домашнего обихода.
+                    </p>
+                    <p class="blog__paragraph">
+                        Специфический характер имеет живопись в театре. Она предназначена для изготовления декораций, разработки набросков костюмов для сцены и реквизита. Театральный художник призван помочь точно выразить персональные особенности персонажей спектакля, эпоху в которой происходит действие. Это помогает раскрывать суть сценического представления. При этом предполагается учёт большого количества мест, с которых зрители смотрят спектакль, световые и цветовые возможности. Все это помогает адекватно воспринять спектакль.
+                    </p>
+                    <p class="blog__paragraph">
+                        Получившая популярность в средневековье живопись миниатюр используется преимущественно в издательском деле. Издавна книги украшались тщательно проработанными миниатюрными иллюстрациями. В первой половине ХIХ в. огромной популярностью пользовались небольшие акварельные портреты. Их отличали изысканность, изящество и филигранность письма.
+                    </p>
+                    <p class="blog__paragraph">
+                        Различные виды живописи также отличаются связующим веществом, на основе которого создается краска. Так, для масляной живописи применяется краска, в которой красящий пигмент растирается на маслах из растений. Такой краской пишут преимущественно на холсте, а также на картоне, металлических и деревянных плоскостях. Если краска густеет, её разводят специальными разбавителями. В темпере используется краска на казеиновой или яичной основе. Её растворяют водой и в виде жидкой пасты наносят твёрдую поверхность. Благодаря темпере сохранились старинные росписи на стенах, многие иконы и уникальные узоры на предметах домашнего обихода. Актуально применение темперы в живописных и графических работах, при художественном оформлении, декорировании зданий и помещений.
+                    </p>
+                    <p class="blog__paragraph">
+                        Также давнее происхождение имеют фресковая, восковая живопись и мозаика. С помощью первой создаются большие интерьерные композиции. У нее эстетичный вид и отменная долговечность. На основе отбеленного воска делаются восковые краски. Они горячим специальным металлическим инструментом переносятся на деревянную поверхность или холст. В мозаичной живописи произведение создается из небольших осколков разноцветного стекла и камня. Элементы мозаики при помощи цементного состава соединяются с поверхностью и создают интересные эффекты. Панно из мозаики широко используются для оформления помещений внутри общественных зданий и сооружений. Определённое сходство с мозаикой имеет живопись на витражах.
+                    </p>
+                    <p class="blog__paragraph">
+                        Разнообразие живописных произведений, в которых художник выражает свой творческий замысел, помогает увидеть красоту мира в повседневной жизни, постичь его совершенство.
+                    </p>
+                </div>
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                        Такая разная живопись
+                    </h3>
+                    <p class="blog__paragraph">
+                        Сегодня занимающийся живописью художник может работать в театре, на промышленном предприятии и многих других местах. Зачастую именитые художники не работают по найму вообще, а полностью посвящают себя исключительно творчеству. Важной частью творческого процесса живописца является создание материальной основы для работы. Ведь зачастую художник должен нести немалые траты на аренду мастерской, приобретение мольбертов, красок, кистей и других инструментов для живописи. Вписанные в рыночные отношения некоторые живописцы вынуждены заниматься несвойственным им делами, занимаясь продвижением своих работ, маркетингом. Неотъемлемой частью жизни художника является его участие в выставках, конкурсах и других презентационных мероприятиях. Отдельным художникам удается найти почитателей их таланта, которые финансируют творческий процесс. Ещё с древних времен у сильных мира сего было принято иметь своих живописцев. Целью таких людей было использование искусства в целях собственного возвеличивания, фиксация важных исторических событий, формирование у потомков позитивного впечатления. В то же время художники, обслуживавшие таких заказчиков, получали возможность создавать высокохудожественные произведения различных жанров. Именно благодаря их творческим усилиям современный зритель может получить представление о важнейших событиях давно минувших дней, ощутить дыхание прошедших эпох.</p>
+                    <img src="assets/images/blog/352232x.jpg" alt="" class=" blog__img">
+                </div>
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                        Художник и его произведение
+                    </h3>
+                    <p class="blog__paragraph">
+                        Уже не одну сотню лет это делается при помощи живописи – одного из важнейших видов изобразительного искусства. Ничто, кроме живописи, не способно с необычайной глубиной и техническим совершенством отразить богатую цветом, объёмом и материальной уникальностью окружающую человека действительность. Воспроизвести подсвеченный солнечным лучом воздух в утренней прохладе соснового леса. Или показать сверкающую всеми цветами радуги каплю росы на травинке.
+                    </p>
+                    <p class="blog__paragraph">
+                        Глубина окружающего человека пространства, удивительные особенности простых предметов проявляются в художественном творении благодаря использованию средств и приемов, присущих только живописи. Через рисунок, цвет и светотень, выразительные мазки, грамотные композиционные и фактурные решения изображение обычных вещей приобретают художественную ценность. Это и дым мчащегося паровоза, и степная пыль, поднятая табуном лошадей. Зритель может ощутить себя и в космическом корабле, и на палубе старинного парусника. Мастерски выписанные жанровые сюжеты помогут ему ощутить кисейную нежность наряда аристократки и грубую фактуру рубища нищего.
+                    </p>
+                </div>
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                        Зеркало человечества
+                    </h3>
+                    <p class="blog__paragraph">
+                        Человечество помнит себя во многом благодаря живописи. Это были сначала примитивные изображения животных, сцен охоты на них. Затем появился человеческий образ. Складывается подобие композиции. Красками служили кусочки охры и угля. Рабовладельческий период развития общества обогатил живопись её связью с архитектурой, новыми техническими средствами. Нередким было примитивное изображение человека, развёрнутые повествовательные сюжеты. Появились пейзажи, изображения предметов быта, домашних животных и птиц. Такая древняя живопись имела декоративный характер, у неё были контурные линии и цветовые пятна.
+                    </p>
+                    <img src="assets/images/blog/249101x.jpg" alt="" class=" blog__img">
+                </div>
+                <div class="blog__item">
+                    <h3 class="blog__title">
+                        Живописные жанры
+                    </h3>
+                    <p class="blog__paragraph">
+                        Человечество помнит себя во многом благодаря живописи. Это были сначала примитивные изображения животных, сцен охоты на них. Затем появился человеческий образ. Складывается подобие композиции. Красками служили кусочки охры и угля. Рабовладельческий период развития общества обогатил живопись её связью с архитектурой, новыми техническими средствами. Нередким было примитивное изображение человека, развёрнутые повествовательные сюжеты. Появились пейзажи, изображения предметов быта, домашних животных и птиц. Такая древняя живопись имела декоративный характер, у неё были контурные линии и цветовые пятна.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="popular-arts">
+            <div class="popular-arts__body">
+                <h1 class="popular-arts__title">
+                    Самые известные картины
+                </h1>
+                <div class="popular-arts__wrapper">
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/aiva.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/bosx.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/boti.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/carava.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/danae.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/gogh.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/djoko.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/klimt.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/mike.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/rafa.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/rubens.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/shish.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/ttn.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/vela.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/authors/verm.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/krylco.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/moroznoe-utro.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/nerexta-zimoj_1.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/nu-gde-zhe-dedushka-moroz.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/pervye.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/piony_7.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/po-nebesam.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/predzime_2.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/predzime_2.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/rumyanit-solnce-snezhnye-xolmy.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/sredi-vetvej-cvetushix.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/v-sadu.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/variant-2.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/wednesday.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                    <a href="" class="popular-arts__link">
+                        <img src="assets/images/user_pictures/zasnezhennyj-les.jpg" alt="" class=" popular-arts__img">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__head">
+            <span class="main-footer__title">
+                2020-2022  <i class="fa-regular fa-copyright"></i>  ГалеМир   16+
+            </span>
+            <div class="main-footer__links social-links">
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-vk"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-square-odnoklassniki"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-yandex"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        <div class="main-footer__body">
+            <ul class="main-footer__list">
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Помощь
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            F.A.Q
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            О сайте
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Реклама на сайте
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-microphone"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Контакты
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="main-footer__list">
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                           Поддержать проект 
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Правила
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-book"></i>
+                        </span>
+                    </a>           
+                 </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                           Пользовательское соглашение 
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Политика конфиденциальности
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Авторские права
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-flag"></i>
+                        </span>
+                    </a>                
+                </li>
+            </ul>
+        </div>
+    </footer>    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/libs/jquery.mosaic.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/libs/jquery.mosaic.css" />
+    <script type="text/javascript" src="assets/libs/jquery.lazy-master/jquery.lazy.min.js"></script>
+
+    <script src="assets/js/main.min.js"></script>
+</body>
+</html>
