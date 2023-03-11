@@ -137,6 +137,18 @@ function DesctopAside(){
     $('.main-container').css("paddingLeft","260px")
     $('.main-footer').css("paddingLeft","260px")
 }
+// Проверка текстовых полей
+
+function InputCheck(){
+    let CurentInput = $(".autorize__input:focus");
+        if($.trim(CurentInput.val()) != ""){
+            CurentInput.parent(".autorize__text-wrapper").addClass('active');
+        }
+        else{
+            CurentInput.parent(".autorize__text-wrapper").removeClass('active');
+        }
+}
+
 // LazyLoad
 $(function() {
     $('.lazy').lazy({
