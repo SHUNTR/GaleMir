@@ -29,7 +29,18 @@ $(window).on("click",(function(e){
          }})
      }}
  ))
-
+// Прослушивание загрузки страницы
+$(document).ready(function(){
+    // Прячем прелоудер
+    HidePreloader();
+   
+   
+    // Слушаем нажанитие на кнопку фильтра
+    $('.artist__btn').click(function(){
+        $('.artist__btn.active').removeClass("active");
+        $(this).addClass("active");
+    });
+})
                                                                       // Функции
 // Включение и выключение полноэкранного режима
 function EnableFullScreen(element){
@@ -60,6 +71,12 @@ function EnableFullScreen(element){
                 document.msExitFullscreen();
             }
         }
+}
+// Скрытие прелоудера
+function HidePreloader(){
+    $('.preloader').fadeOut(700,function(){
+        $('.preloader').remove();
+    });
 }
 // Показ панели поиска
 function ShowSearchPanel(){
@@ -138,7 +155,6 @@ function DesctopAside(){
     $('.main-footer').css("paddingLeft","260px")
 }
 // Проверка текстовых полей
-
 function InputCheck(){
     let CurentInput = $(".autorize__input:focus");
         if($.trim(CurentInput.val()) != ""){
@@ -148,7 +164,6 @@ function InputCheck(){
             CurentInput.parent(".autorize__text-wrapper").removeClass('active');
         }
 }
-
 // LazyLoad
 $(function() {
     $('.lazy').lazy({
