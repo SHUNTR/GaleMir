@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="stylesheet" href="assets/css/main.min.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="icon" href="assets/images/icons/logo__icon.svg" type="image/svg">
+   <link rel="stylesheet" href="assets/fonts/fonts.min.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+   <script type="text/javascript" src="assets/libs/jquery.lazy-master/jquery.lazy.min.js"></script>
+   <script src="https://kit.fontawesome.com/cb18628afa.js" crossorigin="anonymous"></script>
+   <title>Галемир - Художники</title>   <link rel="stylesheet" href="assets/css/artist.min.css"></head>
+<body>
+    <div class="preloader">
+        <div class="preloader__wrapper preloader__item">
+            <div class="preloader__item">
+                <div class="preloader__item">
+                    <div class="preloader__item">
+                        <div class="preloader__item">
+                            <div class="preloader__item">
+                                <div class="preloader__item"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="main-header">
+            <a class="main-header__item main-header__logo-wrapper" href="index.html">
+                    <img src="assets/images/icons/logo__icon.svg" alt="" class="main-header__logo icon">
+                    <img src="assets/images/icons/logo.svg" alt="" class="main-header__logo">
+            </a>
+            <div class="main-header__item">
+                <div class="main-header__btns-wrapper">
+                    <button class="main-header__btn" type="button" onclick="ChangeAsideMenu()">
+                        <i class="fa-solid fa-grip-lines"></i>
+                    </button>
+                    <button class="main-header__btn" type="button" onclick="EnableFullScreen()">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+                <div class="main-header__user-wrapper user-wrapper">
+                    <button class="main-header__btn popup-opener" type="button" onclick="ShowUserMenu()">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div class="user-wrapper__menu popup-wrapper">
+                        <ul class="user-wrapper__list">
+                            <li class="user-wrapper__item">
+                                <a class="user-wrapper__btn" href="login.html">
+                                       <span class="user-wrapper__icon">
+                                        <i class="fas fa-sign-in-alt"></i>
+                                        </span>
+                                        <span class="user-wrapper__text">
+                                        Вход
+                                        </span>
+                                </a>
+                            </li>
+                            <li class="user-wrapper__item">
+                                <a class="user-wrapper__btn" href="register.html">
+                                    <span class="user-wrapper__icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </span>
+                                    <span class="user-wrapper__text">
+                                        Регистрация
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="user-wrapper__item">
+                                <a href="profile.html" class="user-wrapper__btn">
+                                    <span class="user-wrapper__icon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <span class="user-wrapper__text">
+                                        Профиль
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </header>
+    <aside class="main-aside">
+        <ul class="main-aside__menu site-menu"> 
+            <li class="site-menu__item">
+                <h1 class="site-menu__title">
+                    Музей
+                </h1>
+                <ul class="site-menu__list">
+                    <li class="site-menu__list-item active">
+                        <button class="site-menu__btn" type="button" onclick="NavMenuChanger(event)">
+                            <span class="site-menu__icon">
+                                <i class="fas fa-university"></i>
+                            </span>
+                            <span class="site-menu__text">
+                                Картины
+                            </span>
+                           <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="site-menu__sublist sublist">
+                            <li class="sublist__item">  
+                                <a href="artist.html" class="sublist__link">
+                                Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">
+                                <a href="authors.html" class="sublist__link">
+                                     Русские Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="authorsNR.html" class="sublist__link">
+                                    Иностранные Художники
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="museum.html" class="sublist__link">
+                                Музеи Мира
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="site-menu__item">
+                <h1 class="site-menu__title">
+                    Артклуб
+                </h1>
+                <ul class="site-menu__list">
+                    <li class="site-menu__list-item">
+                        <button class="site-menu__btn" type="button" onclick="NavMenuChanger(event)">
+                            <span class="site-menu__icon">
+                                <i class="fas fa-play"></i>
+                            </span>
+                            <span class="site-menu__text">
+                                Экспозиция
+                            </span>
+                           <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <ul class="site-menu__sublist sublist">
+                            <li class="sublist__item">
+                                <a href="artclub.html" class="sublist__link">
+                                     Живопись
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Графика
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Цифровое исскуство
+                                </a>
+                            </li>
+                            <li class="sublist__item">
+                                <a href="" class="sublist__link">
+                                     Хендмейд
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Абстракция
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Иконы
+                                </a>
+                            </li>
+                            <li class="sublist__item">
+                                <a href="" class="sublist__link">
+                                     Фотография
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Скульптура
+                                </a>
+                            </li>
+                            <li class="sublist__item">  
+                                <a href="" class="sublist__link">
+                                    Детсткие рисунки
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            
+           
+        </ul>
+    </aside>    
+    <main class="main-container">
+        <section class="artist">
+            <h1 class="artist__title">
+                Художники - все по алфавиту
+            </h1>
+            <div class="artist__btn-wrapper">
+                <button class="artist__btn" >А</button>
+                <button class="artist__btn" >Б</button>
+                <button class="artist__btn" >В</button>
+                <button class="artist__btn" >Г</button>
+                <button class="artist__btn" >Д</button>
+                <button class="artist__btn" >Е</button>
+                <button class="artist__btn" >Ё</button>
+                <button class="artist__btn" >З</button>
+                <button class="artist__btn" >Ж</button>
+                <button class="artist__btn" >И</button>
+                <button class="artist__btn" >Й</button>
+                <button class="artist__btn" >К</button>
+                <button class="artist__btn" >Л</button>
+                <button class="artist__btn" >М</button>
+                <button class="artist__btn" >Н</button>
+                <button class="artist__btn" >О</button>
+                <button class="artist__btn" >П</button>
+                <button class="artist__btn" >Р</button>
+                <button class="artist__btn" >С</button>
+                <button class="artist__btn" >Т</button>
+                <button class="artist__btn" >У</button>
+                <button class="artist__btn" >Ф</button>
+                <button class="artist__btn" >Х</button>
+                <button class="artist__btn" >Ц</button>
+                <button class="artist__btn" >Ч</button>
+                <button class="artist__btn" >Ш</button>
+                <button class="artist__btn" >Щ</button>
+                <button class="artist__btn" >Ы</button>
+                <button class="artist__btn" >Э</button>
+                <button class="artist__btn" >Ю</button>
+                <button class="artist__btn" >Я</button>
+                <button class="artist__btn" >А...Я</button>
+            </div>
+            <h3 class="artist__subtitle">
+                Показаны ссылки на художников, в альбомах которых не менее 5 картин:
+            </h3>
+            <div class="artist__wrapper">
+                <div class="artist__block">
+                    <h2 class="artist__letter">А</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="artprofile.html" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Б</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">В</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Г</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Д</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Е</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ё</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">З</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ж</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">И</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Й</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">К</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Л</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">М</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Н</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">О</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">П</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Р</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">С</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Т</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">У</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ф</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Х</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ц</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ч</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ш</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Щ</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ы</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Э</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Ю</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="artist__block">
+                    <h2 class="artist__letter">Я</h2>
+                    <ul class="artist__list">
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Айвазовский, Иван Константинович
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Аусенсиа, Хесус Хелгера
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Альма-Тадема, Лоуренс
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+    
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Амано, Ёситака
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                        Ариха, Авидор
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                        <li class="artist__item">
+                            <span class="artist__name">
+                                <a href="" class="artist__link">              
+                                    Армстронг, Рольф
+                                </a>
+                            </span>
+                                <span class="artist__count">
+                                    515  <i class="fa-solid fa-images"></i>
+                                </span>
+                        </li>
+                    </ul>
+                </div>
+    
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="main-footer__head">
+            <span class="main-footer__title">
+                2020-2022  <i class="fa-regular fa-copyright"></i>  ГалеМир   16+
+            </span>
+            <div class="main-footer__links social-links">
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-vk"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-square-odnoklassniki"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-yandex"></i>
+                </a>
+                <a href="" class="social-links__item">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+        </div>
+        <div class="main-footer__body">
+            <ul class="main-footer__list">
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Помощь
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            F.A.Q
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-circle-question"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            О сайте
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Реклама на сайте
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-microphone"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Контакты
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="main-footer__list">
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                           Поддержать проект 
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Правила
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-book"></i>
+                        </span>
+                    </a>           
+                 </li>
+                <li class="main-footer__item">
+                     <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                           Пользовательское соглашение 
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                    <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Политика конфиденциальности
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </span>
+                    </a>
+                </li>
+                <li class="main-footer__item">
+                <a href="" class="main-footer__link">
+                        <span class="main-footer__text">
+                            Авторские права
+                        </span>
+                        <span class="main-footer__icon">
+                            <i class="fa-solid fa-flag"></i>
+                        </span>
+                    </a>                
+                </li>
+            </ul>
+        </div>
+    </footer>    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.2/masonry.pkgd.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript" src="assets/libs/jquery-mosaic-master/jquery.mosaic.js"></script>
+    <script type="text/javascript" src="assets/libs/jquery.lazy-master/jquery.lazy.min.js"></script>
+    <script src="assets/js/main.min.js"></script>
+</body>
+</html>
