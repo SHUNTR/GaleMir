@@ -81,6 +81,16 @@
                                     </span>
                                 </a>
                             </li>
+                            <li class="user-wrapper__item">
+                                <a href="?exit=go" class="user-wrapper__btn">
+                                    <span class="user-wrapper__icon">
+                                        <i class="fa-solid fa-door-open"></i>
+                                    </span>
+                                    <span class="user-wrapper__text">
+                                        Выйти
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -196,286 +206,163 @@
             
            
         </ul>
-    </aside>    <main class="main-container">
+    </aside>    <div class="modal">
+        <div class="modal__body" data-name-modal="add_art">
+            <h2 class="modal__title">
+                Добавление картины
+            </h2>
+            <div class="modal__items-wrapper">
+                <div class="modal__item">
+                    <p class="modal__subtitle">Выберите картину с вашего устройства</p>
+                    <label for="art_name" class="modal__label">
+                      <span class="modal__img-name">Выберите файл</span> 
+                    </label>
+                    <img src="assets/images/question.jpg" alt="" class="modal__img"> 
+                    <input type="file" id="art_name" class="modal__input modal__input_img" onchange="ChangeModalImg(event)"  accept=".jpg, .jpeg, .png">
+                </div>
+                <div class="modal__item">
+                    <p class="modal__subtitle">Введите название картины</p>
+                    <input type="text" class="modal__input">
+                </div>
+                <div class="modal__item">
+                    <p class="modal__subtitle">Введите описание картины</p>
+                    <textarea class="modal__input modal__input_textarea"></textarea>
+                </div>
+            </div>
+            <button class="modal__btn">
+                Добавить картину
+            </button>
+        </div>
+    </div>
+    <main class="main-container">
         <section class="arts">
             <hgroup class="arts__title-wrapper">
                 <h1 class="arts__title">
                     Айвазовский, Иван Константинович
                 </h1>
         </hgroup>
+        <button class="arts__btn btn_modal-open" data-name-modal="add_art" >Добавить картину</button>
         <div class="arts__wrapper">
-            <a href="art.html" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Исаак Левитан
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" data-src="assets/images/artist/RU/293798828.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Валентин Александрович Серов
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/382595825.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Суриков, Василий Иванович (1848-1916)
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/457852172.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Перов, Василий Григорьевич (1833-1882)
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/618139933.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Кандинский, Василий Васильевич
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/713881096.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Саврасов, Алексей Кондратьевич (1830 – 1897)
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/720150756.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Маковский Константин Егорович (1839-1915)
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/763601684.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Куинджи, Архип Иванович (1842-1910)
-                    </span>
+                <div  class="arts__item">
+                    <div class="admin-panel">
+                        <button class="admin-panel__btn btn_modal-open" data-name-modal="add_art" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                        <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                    <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
+                  <a class="arts__link" href="museumpage.html">
+                        <span class="country-museums__count">
+                            542 <i class="fa-solid fa-images"></i>
+                        </span> 
+                        <span class="arts__name">
+                            Исаак Левитан
+                        </span>
+                    </a>
                 </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/790655517.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Коровин Константин Алексеевич (1861-1939)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/881320190.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Афремов Леонид (1955 г.р.)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/991114206.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Фешин, Николай Иванович
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1188778130.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Исаак Левитан
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1188778130.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Верещагин, Василий Васильевич
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1489114686.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Кустодиев, Борис (1878-1927)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1943894215.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Петров-Водкин Кузьма Сергеевич
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" alt="assets/images/lazy.png" data-src="assets/images/artist/RU/1188778130.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Исаак Левитан
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'" data-src="assets/images/artist/RU/293798828.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Валентин Александрович Серов
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/382595825.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Суриков, Василий Иванович (1848-1916)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/457852172.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Перов, Василий Григорьевич (1833-1882)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/618139933.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Кандинский, Василий Васильевич
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/713881096.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Саврасов, Алексей Кондратьевич (1830 – 1897)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/720150756.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Маковский Константин Егорович (1839-1915)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/763601684.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Куинджи, Архип Иванович (1842-1910)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/790655517.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Коровин Константин Алексеевич (1861-1939)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/881320190.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Афремов Леонид (1955 г.р.)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/991114206.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Фешин, Николай Иванович
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1188778130.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Исаак Левитан
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1188778130.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Верещагин, Василий Васильевич
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1489114686.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Кустодиев, Борис (1878-1927)
-                    </span>
-                </div>
-            </a>
-            <a href="" class="arts__item">
-                <img alt="" class="lazy arts__img"   onError="this.src='assets/images/lazy.png'"data-src="assets/images/artist/RU/1943894215.jpg.webp">
-                <div class="arts__info">
-                   
-                    <span class="arts__name">
-                        Петров-Водкин Кузьма Сергеевич
-                    </span>
-                </div>
-            </a>
-            
-           
         </div>
         </section>
     </main>

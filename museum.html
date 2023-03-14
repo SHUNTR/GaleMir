@@ -80,6 +80,16 @@
                                     </span>
                                 </a>
                             </li>
+                            <li class="user-wrapper__item">
+                                <a href="?exit=go" class="user-wrapper__btn">
+                                    <span class="user-wrapper__icon">
+                                        <i class="fa-solid fa-door-open"></i>
+                                    </span>
+                                    <span class="user-wrapper__text">
+                                        Выйти
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -195,7 +205,45 @@
             
            
         </ul>
-    </aside>    
+    </aside>    <div class="modal">
+        <div class="modal__body" data-name-modal="Add_museum">
+            <h2 class="modal__title">
+                Добавление музея
+            </h2>
+            <div class="modal__items-wrapper">
+                <div class="modal__item">
+                    <p class="modal__subtitle">Выберите фотографию музея</p>
+                    <label for="art_name" class="modal__label">
+                      <span class="modal__img-name">Выберите файл</span> 
+                    </label>
+                    <img src="assets/images/question.jpg" alt="" class="modal__img"> 
+                    <input type="file" id="art_name" class="modal__input modal__input_img" onchange="ChangeModalImg(event)"  accept=".jpg, .jpeg, .png">
+                </div>
+                <div class="modal__item">
+                    <p class="modal__subtitle">Введите название музея</p>
+                    
+                    <input type="text" class="modal__input">
+                </div>
+                <div class="modal__item">
+                    <p class="modal__subtitle">Выберите страну музея</p>
+                    <select name="" id="" class="modal__input">
+                        <option value="" class="modal__option">Россия</option>
+                        <option value="" class="modal__option">Германия</option>
+                        <option value="" class="modal__option">Италия</option>
+                        <option value="" class="modal__option">Франция</option>
+                        <option value="" class="modal__option">Швеция</option>
+                    </select>
+                </div>
+                <div class="modal__item">
+                    <p class="modal__subtitle">Введите описание музея</p>
+                    <textarea class="modal__input modal__input_textarea"></textarea>
+                </div>
+            </div>
+            <button class="modal__btn">
+                Добавить музей
+            </button>
+        </div>
+    </div>
     <main class="main-container">
     <section class="museum">
         <hgroup class="museum__title-wrapper">
@@ -207,6 +255,7 @@
                 На этой странице - коллекции самых крупных художественных музеев мира.
             </p>
         </hgroup>
+        <button class="museum__btn btn_modal-open" data-name-modal="Add_museum" >Добавить музей</button>
         <div class="museum__wrapper">
                 <div class="museum__item country-museums">
                     <h2 class="country-museums__country">
@@ -216,50 +265,66 @@
                         </span>
                     </h2>
                     <div class="country-museums__wrapper">
-                        <a href="museumpage.html" class="country-museums__item">
+                        <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
                             <img data-src="assets/images/museums/italia/vatikan.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Ватикан
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/borg.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                            <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Галерея Боргезе
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/6693-yjhbxncqsa-1920.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Пинакотека брера
                                 </span>
+                           </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/uff.jpeg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Уффиции
                                 </span>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="museum__item country-museums">
@@ -270,50 +335,66 @@
                         </span>
                     </h2>
                     <div class="country-museums__wrapper">
-                        <a href="" class="country-museums__item">
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
                             <img data-src="assets/images/museums/italia/vatikan.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Ватикан
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/borg.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Галерея Боргезе
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/6693-yjhbxncqsa-1920.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Пинакотека брера
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/uff.jpeg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Уффиции
                                 </span>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="museum__item country-museums">
@@ -324,50 +405,66 @@
                         </span>
                     </h2>
                     <div class="country-museums__wrapper">
-                        <a href="" class="country-museums__item">
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
                             <img data-src="assets/images/museums/italia/vatikan.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Ватикан
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/borg.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Галерея Боргезе
                                 </span>
+                           </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/6693-yjhbxncqsa-1920.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Пинакотека брера
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/uff.jpeg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Уффиции
                                 </span>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="museum__item country-museums">
@@ -378,50 +475,66 @@
                         </span>
                     </h2>
                     <div class="country-museums__wrapper">
-                        <a href="" class="country-museums__item">
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
                             <img data-src="assets/images/museums/italia/vatikan.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Ватикан
                                 </span>
+                           </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/borg.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Галерея Боргезе
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/6693-yjhbxncqsa-1920.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Пинакотека брера
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/uff.jpeg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Уффиции
                                 </span>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="museum__item country-museums">
@@ -432,50 +545,66 @@
                         </span>
                     </h2>
                     <div class="country-museums__wrapper">
-                        <a href="" class="country-museums__item">
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
                             <img data-src="assets/images/museums/italia/vatikan.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Ватикан
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/borg.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Галерея Боргезе
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/6693-yjhbxncqsa-1920.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Пинакотека брера
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/uff.jpeg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Уффиции
                                 </span>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="museum__item country-museums">
@@ -486,50 +615,66 @@
                         </span>
                     </h2>
                     <div class="country-museums__wrapper">
-                        <a href="" class="country-museums__item">
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
+                            </div>
                             <img data-src="assets/images/museums/italia/vatikan.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Ватикан
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/borg.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Галерея Боргезе
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/6693-yjhbxncqsa-1920.jpg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Пинакотека брера
                                 </span>
+                            </a>
+                        </div>
+                         <div  class="country-museums__item">
+                            <div class="admin-panel">
+                                <button class="admin-panel__btn btn_modal-open" data-name-modal="Add_museum" data-action="edit"> <i class="fa-solid fa-pen"></i></button>
+                                <button class="admin-panel__btn" data-action="delete"><i class="fa-solid fa-trash"></i></button>
                             </div>
-                        </a>
-                        <a href="" class="country-museums__item">
                             <img data-src="assets/images/museums/italia/uff.jpeg" alt="" class="country-museums__img lazy">
-                            <div class="country-museums__info">
+                          <a class="country-museums__info" href="museumpage.html">
                                 <span class="country-museums__count">
                                     542 <i class="fa-solid fa-images"></i>
                                 </span> 
                                 <span class="country-museums__name">
                                     Уффиции
                                 </span>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
                 </div>
         </div>

@@ -80,6 +80,16 @@
                                     </span>
                                 </a>
                             </li>
+                            <li class="user-wrapper__item">
+                                <a href="?exit=go" class="user-wrapper__btn">
+                                    <span class="user-wrapper__icon">
+                                        <i class="fa-solid fa-door-open"></i>
+                                    </span>
+                                    <span class="user-wrapper__text">
+                                        Выйти
+                                    </span>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -195,45 +205,68 @@
             
            
         </ul>
-    </aside>    
+    </aside>    <div class="modal">
+        <div class="modal__body" data-name-modal="Add_artist">
+            <h2 class="modal__title">
+                Добавление Художника
+            </h2>
+            <div class="modal__items-wrapper">  
+                <div class="modal__item">
+                    <p class="modal__subtitle">Введите ФИО художника</p> 
+                    <input type="text" class="modal__input">
+                </div>
+                <div class="modal__item">
+                    <p class="modal__subtitle">Выберите категорию художника</p>
+                    <select name="" id="" class="modal__input">
+                        <option value="" class="modal__option">Иностранный</option>
+                        <option value="" class="modal__option">Русский</option>
+                    </select>
+                </div>
+            </div>
+            <button class="modal__btn">
+                Добавить художника
+            </button>
+        </div>
+    </div>
     <main class="main-container">
         <section class="artist">
             <h1 class="artist__title">
                 Художники - все по алфавиту
             </h1>
             <div class="artist__btn-wrapper">
-                <button class="artist__btn" >А</button>
-                <button class="artist__btn" >Б</button>
-                <button class="artist__btn" >В</button>
-                <button class="artist__btn" >Г</button>
-                <button class="artist__btn" >Д</button>
-                <button class="artist__btn" >Е</button>
-                <button class="artist__btn" >Ё</button>
-                <button class="artist__btn" >З</button>
-                <button class="artist__btn" >Ж</button>
-                <button class="artist__btn" >И</button>
-                <button class="artist__btn" >Й</button>
-                <button class="artist__btn" >К</button>
-                <button class="artist__btn" >Л</button>
-                <button class="artist__btn" >М</button>
-                <button class="artist__btn" >Н</button>
-                <button class="artist__btn" >О</button>
-                <button class="artist__btn" >П</button>
-                <button class="artist__btn" >Р</button>
-                <button class="artist__btn" >С</button>
-                <button class="artist__btn" >Т</button>
-                <button class="artist__btn" >У</button>
-                <button class="artist__btn" >Ф</button>
-                <button class="artist__btn" >Х</button>
-                <button class="artist__btn" >Ц</button>
-                <button class="artist__btn" >Ч</button>
-                <button class="artist__btn" >Ш</button>
-                <button class="artist__btn" >Щ</button>
-                <button class="artist__btn" >Ы</button>
-                <button class="artist__btn" >Э</button>
-                <button class="artist__btn" >Ю</button>
-                <button class="artist__btn" >Я</button>
-                <button class="artist__btn" >А...Я</button>
+                <button class="artist__btn filter" >А</button>
+                <button class="artist__btn filter" >Б</button>
+                <button class="artist__btn filter" >В</button>
+                <button class="artist__btn filter" >Г</button>
+                <button class="artist__btn filter" >Д</button>
+                <button class="artist__btn filter" >Е</button>
+                <button class="artist__btn filter" >Ё</button>
+                <button class="artist__btn filter" >З</button>
+                <button class="artist__btn filter" >Ж</button>
+                <button class="artist__btn filter" >И</button>
+                <button class="artist__btn filter" >Й</button>
+                <button class="artist__btn filter" >К</button>
+                <button class="artist__btn filter" >Л</button>
+                <button class="artist__btn filter" >М</button>
+                <button class="artist__btn filter" >Н</button>
+                <button class="artist__btn filter" >О</button>
+                <button class="artist__btn filter" >П</button>
+                <button class="artist__btn filter" >Р</button>
+                <button class="artist__btn filter" >С</button>
+                <button class="artist__btn filter" >Т</button>
+                <button class="artist__btn filter" >У</button>
+                <button class="artist__btn filter" >Ф</button>
+                <button class="artist__btn filter" >Х</button>
+                <button class="artist__btn filter" >Ц</button>
+                <button class="artist__btn filter" >Ч</button>
+                <button class="artist__btn filter" >Ш</button>
+                <button class="artist__btn filter" >Щ</button>
+                <button class="artist__btn filter" >Ы</button>
+                <button class="artist__btn filter" >Э</button>
+                <button class="artist__btn filter" >Ю</button>
+                <button class="artist__btn filter" >Я</button>
+                <button class="artist__btn filter" >А...Я</button>
+                <button class="artist__btn btn_modal-open" data-name-modal="Add_artist" >Добавить художника</button>
             </div>
             <h3 class="artist__subtitle">
                 Показаны ссылки на художников, в альбомах которых не менее 5 картин:
