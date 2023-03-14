@@ -30,6 +30,7 @@
 }
 
 .arts__item {
+    position: relative;
     border-radius: 5px;
     max-width: 150px;
     display: flex;
@@ -37,7 +38,11 @@
     background-color: white;
 }
 
-.arts__info {
+.arts__item:hover .admin-panel {
+    opacity: 1;
+}
+
+.arts__link {
     padding: 10px;
     display: flex;
     color: #292929;
@@ -45,15 +50,26 @@
     overflow: hidden;
     font-weight: bold;
     transition: 0.2s;
-    flex-direction: column;
+    flex-direction: row-reverse;
+    gap: 5px;
 }
 
-.arts__info:hover {
+.arts__link:hover {
     color: #ff4c52;
 }
 
 .arts__name {
     font-weight: bold;
+}
+
+.arts__btn {
+    padding: 10px;
+    background-color: #1c70fd;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {

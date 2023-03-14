@@ -2,6 +2,16 @@
     padding: 40px;
 }
 
+.museum__btn {
+    padding: 10px;
+    background-color: #1c70fd;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
 .museum__title-wrapper {
     display: flex;
     flex-direction: column;
@@ -52,6 +62,7 @@
 }
 
 .country-museums__item {
+    position: relative;
     width: -moz-fit-content;
     width: fit-content;
     display: flex;
@@ -64,6 +75,10 @@
 .country-museums__item:hover {
     transform: scale(1.05);
     box-shadow: 4px 4px 21px 9px rgba(34, 60, 80, 0.09);
+}
+
+.country-museums__item:hover .admin-panel {
+    opacity: 1;
 }
 
 .country-museums__item:hover .country-museums__info {

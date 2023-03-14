@@ -33,12 +33,31 @@ $(window).on("click",(function(e){
 $(document).ready(function(){
     // Прячем прелоудер
     HidePreloader();
-   
-   
     // Слушаем нажанитие на кнопку фильтра
-    $('.artist__btn').click(function(){
-        $('.artist__btn.active').removeClass("active");
+    $('.artist__btn.filter').click(function(){
+        if(!$(this).hasClass('active'))
+             $('.artist__btn.active').removeClass("active");
         $(this).addClass("active");
+    });
+
+    // Закрытие модального окна
+    function CloseModal(event){
+        if(event.target.classList.contains('modal')) 
+           {
+            $('.modal').fadeOut(500,function(){$('.modal__body.active').removeClass('active')});
+            }
+    }
+    $(".modal").click(function(event){
+        CloseModal(event);
+    });
+    // Открытие модального окна
+    function OpenModal(Modal_name){
+        $('.modal').fadeIn(500);
+        $(`.modal__body[data-name-modal=${Modal_name}]`).addClass('active');
+    }
+    $(".btn_modal-open").click(function(){
+     let Modal_name =  $(this).attr('data-name-modal');
+        OpenModal(Modal_name);
     });
 })
                                                                       // Функции
@@ -172,3 +191,12 @@ $(function() {
           threshold: 0
     });
 });
+// Смена картинки в модальном окне
+function ChangeModalImg(){
+
+    let CurrentImageName = $('.modal__input_img')[0].files[0].name;
+    let CurrentImageSrc = URL.createObjectURL($('.modal__input_img')[0].files[0]);
+
+    $(".modal__img-name").html(CurrentImageName);
+    $('.modal__img').fadeIn("fast").attr('src',CurrentImageSrc);
+}

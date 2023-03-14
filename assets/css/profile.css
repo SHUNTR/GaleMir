@@ -6,6 +6,19 @@
     position: relative;
 }
 
+.main-container .profile__input_update-avatar {
+    display: none;
+}
+
+.main-container .profile__label {
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.main-container .profile__label:hover {
+    color: #1c70fd;
+}
+
 .main-container .profile__user-img {
     max-width: 250px;
     width: 100%;
@@ -54,6 +67,10 @@
 
 .main-container .profile__item:hover {
     filter: brightness(100%) blur(0px);
+}
+
+.main-container .profile__item:hover .admin-panel {
+    opacity: 1;
 }
 
 .main-container .profile__wrapper {
