@@ -42,6 +42,22 @@
     opacity: 1;
 }
 
+.arts__info {
+    padding: 10px;
+    display: flex;
+    color: #292929;
+    font-size: 12px;
+    overflow: hidden;
+    font-weight: bold;
+    transition: 0.2s;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+
+.arts__info:hover {
+    color: #ff4c52;
+}
+
 .arts__link {
     padding: 10px;
     display: flex;
